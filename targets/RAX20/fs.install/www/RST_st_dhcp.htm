@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<%11%>
+<title>NETGEAR Router <%12%></title>
+<link rel="stylesheet" href="<%13%>">
+<link rel="stylesheet" href="css/scrollbar.css">
+<link rel="stylesheet" href="css/button.css">
+
+<script src="jquery.js"></script>
+<script src="script/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+
+<script src="script/script.js"></script>
+<link rel="stylesheet" href="form.css">
+<script language=JavaScript type="text/javascript">
+
+var t;
+
+    $(document).ready(function()
+    {	
+        $("#target").submit(function() {
+            window.clearTimeout(t);
+            buttonFilter();
+        });
+
+    });
+
+
+
+function Fresh() 
+{
+	var cf = document.forms[0];
+	if(cf.refreshScrn.value == "yes")
+		t = window.setTimeout("location.href='RST_st_dhcp.htm'",10000);
+// reload if not connected	
+}
+</script>
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body  leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text=black onLoad="Fresh()" style="margin:0px;">
+
+<form id="target"  method="post" action="st_dhcp.cgi">
+<input type="hidden" name="buttonHit"><input type="hidden" name="buttonValue">
+
+<TABLE border=0 width="100%">
+
+ 
+ <TR>
+     <TD colspan="2" align="left" nowrap><div class="subhead2 page_title"><%916%> </div></TD>
+ </TR>
+ 
+</TABLE>
+<br><br>
+<table border="0" cellpadding="0" width="100%">
+
+
+</table>
+
+<div class="pt-30 pl28 pr-30">
+<table width="100%" border=0 class="cmn-table-2 tbWhite">
+	<tr class="table_header">
+		<TD NOWRAP width="50%"><B style="font-size: 14px"><%585%></B></td>
+<%424%>
+		<TD NOWRAP width="50%" <%1512%>><%1230%></td>
+<%427%> 
+<%428%>
+		<TD NOWRAP width="50%" style="font-weight:normal;font-size: 14px;font-family: 'Avenir Next'" <%1512%>><%278%></td>
+<%429%>
+        <%1508%>
+        <TD NOWRAP width="50%" style="font-weight:normal;font-size: 14px"><%1513%></td>
+        <%1511%>
+	</tr>
+	
+	<tr>
+		<TD NOWRAP><B><%647%></B></td>
+<%424%>
+		<TD NOWRAP <%1512%>><%1231%></td>
+<%427%> 
+<%428%>
+		<TD NOWRAP <%1512%>><%279%></td>
+<%429%>
+        <%1508%>
+        <TD NOWRAP width="50%"><%1514%></td>
+        <%1511%>        
+	</tr>
+	<tr>
+		<TD NOWRAP><B><%1515%></B></td>
+<%424%>
+		<TD NOWRAP <%1512%>><%1516%></td>
+<%427%> 
+<%428%>
+		<TD NOWRAP <%1512%>><%598%></td>
+<%429%>
+        <%1508%>
+        <TD NOWRAP width="50%"><%1517%></td>
+        <%1511%>           
+	</tr>
+	<tr>
+		<TD NOWRAP><B><%1518%></B></td>
+<%424%>
+		<TD NOWRAP><%1519%></td>
+<%427%> 
+<%428%>
+		<TD NOWRAP><%1520%></td>
+<%429%>
+	</tr>
+	<tr>
+		<TD NOWRAP><B><%1521%></B></td>
+        <%1494%>
+                <TD NOWRAP><%1522%></td>
+        <%1507%>
+        <%1508%>
+        <TD NOWRAP width="50%"><%1523%><br><%1524%></td>
+        <%1511%>                   
+	</tr>
+	<tr>
+		<TD NOWRAP><B><%1525%></B></td>
+		<TD NOWRAP><%1526%></td>
+	</tr>
+	<tr>
+		<TD NOWRAP><B><%1527%></B></td>
+		<TD NOWRAP><%1528%></td>
+	</tr>
+</table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="3" width="100%">
+ <TR>
+ <TD align="center" nowrap class="pt-30 pl28">
+	<button type="submit" value="<%1529%>" name="connect" class="button-sty1" onclick="buttonClick(this,'<%1529%>');" ><%1529%></button>
+	<%1096%>
+	<button type="submit" value="<%1530%>" name="connect" class="button-sty1" onclick="buttonClick(this,'<%1530%>');" <%1531%>><%1530%></button>
+	<%1097%>
+	<button type=button value="<%546%>" name="close" class="button-sty1" onclick="buttonClick(this,'<%546%>');self.close();"><%546%></button>
+	<%1098%>
+	<button type="submit" value="<%1530%>" name="connect" class="button-common" onclick="buttonClick(this,'<%1530%>');" disabled ><span class="roundleft_grey" >&nbsp;&nbsp; <%1530%></span><span class="roundright_grey" >&nbsp;&nbsp;&nbsp;&nbsp;</span></button>
+	<%1099%>
+  </TD>
+</TR>
+
+
+ <TR>
+ <TD align="center">&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+<input type="hidden" name="refreshScrn" value="yes">
+</form>
+
+</body>
+</html>
+

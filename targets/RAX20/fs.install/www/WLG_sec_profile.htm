@@ -1,0 +1,96 @@
+<html>
+<head>
+<%11%>
+<title>NETGEAR Router <%12%></title> 
+<link rel="stylesheet" href="form.css">
+<%14%>
+<script language="javascript" type="text/javascript">
+<!--
+function chgSel(index)
+{
+    if (index < 2 || index > 4) {
+        alert("<%3511%>");
+        return false;
+    }
+
+    document.forms[0].ssid_sel.value = index;
+    document.forms[0].submit();
+
+    return true;
+}
+
+function initScrn()
+{
+    var profile_idx = <%3489%>;
+    if (!profile_idx || profile_idx < 1 || profile_idx > 3)
+        profile_idx = 1;
+    var sel_index = profile_idx - 1;
+    document.forms[0].ssidSelect[sel_index].checked = true;
+    parent.profilebuttom.location.href = "WLG_wireless_2.htm";
+
+    return true;
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="initScrn();loadhelp('WLG_sec_profile');">
+<form name="formname" method="POST" action="wlg_sec_profile_main.cgi">
+<table border="0" cellpadding="0" cellspacing="3" width="100%">
+<tr>
+	<td colspan="2" align='left'><h1><%1928%></h1></td>
+</tr>
+
+<tr>
+ <td colspan="2" background="liteblue.gif" height="12"> &nbsp;</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<p><tabindex="-1"><b><%3512%></b></a></p></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<table border ="1" cellpadding ="0" cellspacing ="0" width="100%">
+<TR>
+	<td nowrap width="3%" align="center"><span class="thead">&nbsp;</span></td>
+	<td nowrap width="3%" align="center"><span class="thead"><%1932%></span></td>
+	<td nowrap align="center"><span class="thead"><%3513%></span></td>
+	<td nowrap align="center"><span class="thead"><%3514%></span></td>
+	<td nowrap align="center"><span class="thead"><%657%></span></td>
+    <td nowrap align="center"><span class="thead"><%3515%></span></td>
+</TR> 
+<tr>
+	<td nowrap align=center> &nbsp;<input type=RADIO name=ssidSelect value=2 onClick="chgSel(2);"> &nbsp;</td>
+	<td nowrap align=center><span class=thead>1</span></td>
+    <td nowrap align=center><span class=ttext><%3516%></span></td>
+    <td nowrap align=center><span class=ttext><%3517%></span></td>
+    <td nowrap align=center><span class=ttext><%3518%></span></td>
+    <td nowrap align=center><span class=ttext><%3519%></span></td>
+</tr>
+<tr>
+	<td nowrap align=center> &nbsp;<input type=RADIO name=ssidSelect value=3 onClick="chgSel(3);"> &nbsp;</td>
+	<td nowrap align=center><span class=thead>2</span></td>
+	<td nowrap align=center><span class=ttext><%3520%></span></td>
+	<td nowrap align=center><span class=ttext><%3521%></span></td>
+	<td nowrap align=center><span class=ttext><%3522%></span></td>
+    <td nowrap align=center><span class=ttext><%3523%></span></td>
+</tr>
+<tr>
+	<td nowrap align=center> &nbsp;<input type=RADIO name=ssidSelect value=4 onClick="chgSel(4);"> &nbsp;</td>
+	<td nowrap align=center><span class=thead>3</span></td>
+	<td nowrap align=center><span class=ttext><%3524%></span></td>
+	<td nowrap align=center><span class=ttext><%3525%></span></td>
+	<td nowrap align=center><span class=ttext><%3526%></span></td>
+    <td nowrap align=center><span class=ttext><%3527%></span></td>
+</tr>
+</table>
+</td>
+</tr>
+
+</TABLE> 
+<input type="hidden" name="ssid_sel" value="-1">
+</form>
+</body>
+</html>

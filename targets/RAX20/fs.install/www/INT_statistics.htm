@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-/W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtm1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <%11%>
+    <%1410%>
+
+    <title><%2044%></title>
+    <script language=JavaScript src="script/script.js"> </script>
+    <script language=JavaScript src="script/jquery.js"> </script>
+    <link rel="stylesheet" type="text/css" href="<%13%>">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+ 
+    
+    <script language="JavaScript" type="text/javascript">
+      
+        var defaultInterval = 5;
+        var intervalSec = 5
+        var inter;
+
+        function loadInterval() {
+            intervalId = setInterval("getStatisticPage()", intervalSec * 1000);
+            intervalId2 = setInterval("setDefaultInterval()", 20);
+        }
+
+        function setDefaultInterval()
+        {
+            var intervalText;
+            intervalText=document.getElementsByName('interval');
+            intervalText[0].value = defaultInterval ;
+            clearInterval(intervalId2) ;
+        }
+
+        function resetInterval()
+        {
+            var intervalText;
+            var newInterval;
+            intervalText=document.getElementsByName('interval');
+            newInterval=intervalText[0].value;
+            intervalSec = parseInt(newInterval,10);
+            if ( isNaN(intervalSec) || intervalSec < 5 || intervalSec > 86400)
+            {
+                intervalSec = defaultInterval
+            }
+            
+            intervalText.value = intervalSec ;
+            clearInterval(intervalId) ;
+            intervalId = setInterval("getStatisticPage()", intervalSec * 1000);
+        }
+
+        function stopInterval() 
+        {
+            var intervalText;
+            clearInterval(intervalId) ;
+            intervalText=document.getElementsByName('interval');
+            intervalText[0].value = "" ;
+            clearInterval(intervalId);
+            
+        }
+
+        function getStatisticPage() {
+            myTitle = "PNC Statistic " ;
+            document.location.href = "INT_statistics.htm" ;
+        } 
+
+
+    </script>
+</head>	
+
+<body bgcolor="#E5E5E5" onLoad="loadInterval();">
+<form name="formname" method="POST" action="traffic.cgi">
+  <div class="subhead">
+    <div class="subhead-text"> <%2044%> 
+   </div>
+</div>
+    <table style="width:740px;border-collapse:collapse;background-color:#FFFFFF;padding-left:20px;padding-right:20px">
+      <tr align="left" valign="middle" style="margin-left:10px;margin-right:10px;height:30px">
+          <td class="subhead-text-menu" style="height:5px;border-right:1px solid">
+              <div class="normal-text" style="text-decoration:none;"> <%1412%> <%1413%></div>
+          </td>
+      </tr>
+      <tr>
+        <td style="border-left:1px solid;border-right:1px solid" class="table-seperate-border">
+          <table style="border-collapse:collapse;background-color:#FFFFFF;margin-left:20px;margin-right:20px;border-style:none" border="0">
+            <tr align="center" valign="middle" style="padding-left:20px;padding-right:20px">
+              <th class="table-round-top-left" style="width:13px;heigth:29px;"></td>
+              <th class="table-header" style="width:15%"><%725%></td>
+              <td class="table-header" style="width:15%"><%793%></td>
+              <th class="table-header" style="width:10%"><%1414%></td>
+              <th class="table-header" style="width:10%"><%1415%></td>
+              <th class="table-header" style="width:10%"><%1416%></td>
+              <th class="table-header" style="width:10%"><%1417%></td>
+              <th class="table-header" style="width:10%"><%1418%></td>
+              <th class="table-header"><%1419%></td>
+              <th class="table-round-top-right" style="width:13px"></td>
+            </tr>
+            <tr align="center" valign="middle" style="background-color:#E5E5E5E5">
+              <td class="table-header" style="heigth:29px"></td>
+              <td class="table-header"><%1430%></td>
+              <td class="table-content-text"><%1436%></td>
+              <td class="table-content-text"><%1437%></td>
+              <td class="table-content-text"><%1438%></td>
+              <td class="table-content-text"><%1439%></td>
+              <td class="table-content-text"><%1440%></td>
+              <td class="table-content-text"><%1441%></td>
+              <td class="table-content-text"><%1442%></td>
+              <td></td>
+            </tr>
+            <tr align="center" valign="middle" style="background-color:#E5E5E5">
+              <td class="table-header" style="heigth:29px"></td>
+              <td class="table-header"><%1443%>1</td>
+              <td class="table-content-text"><%4077%></td>
+              <td class="table-content-text" rowspan="4"><%4078%></td>
+              <td class="table-content-text" rowspan="4"><%4079%></td>
+              <td class="table-content-text" rowspan="4"><%4080%></td>
+              <td class="table-content-text" rowspan="4"><%4081%></td>
+              <td class="table-content-text" rowspan="4"><%4082%></td>
+              <td class="table-content-text"><%4083%></td>
+              <td></td>
+            </tr>
+            <tr align="center" valign="middle" style="background-color:#E5E5E5">
+              <td class="table-header" style="heigth:29px"></td>
+              <td class="table-header"><%1443%>2</td>
+              <td class="table-content-text"><%4084%></td>
+<!--
+              <td class="table-content-text"><%4085%></td>
+              <td class="table-content-text"><%4086%></td>
+              <td class="table-content-text"><%4087%></td>
+              <td class="table-content-text"><%4088%></td>
+              <td class="table-content-text"><%4089%></td>
+-->
+              <td class="table-content-text"><%4090%></td>
+              <td></td>
+            </tr>
+            <tr align="center" valign="middle" style="background-color:#E5E5E5">
+              <td class="table-header" style="heigth:29px;"></td>
+              <td class="table-header"><%1443%>3</td>
+              <td class="table-content-text"><%4091%></td>
+<!--
+              <td class="table-content-text"><%4092%></td>
+              <td class="table-content-text"><%4093%></td>
+              <td class="table-content-text"><%4094%></td>
+              <td class="table-content-text"><%4095%></td>
+              <td class="table-content-text"><%4096%></td>
+-->
+              <td class="table-content-text"><%4097%></td>
+              <td></td>
+            </tr>
+            <tr align="center" valign="middle" style="background-color:#E5E5E5">
+              <td class="table-header" style="heigth:29px;"></td>
+              <td class="table-header"><%1443%>4</td>
+              <td class="table-content-text"><%4098%></td>
+<!--
+              <td class="table-content-text"><%4099%></td>
+              <td class="table-content-text"><%4100%></td>
+              <td class="table-content-text"><%4101%></td>
+              <td class="table-content-text"><%4102%></td>
+              <td class="table-content-text"><%4103%></td>
+-->
+              <td class="table-content-text"><%4104%></td>
+              <td></td>
+            </tr>
+      
+      <%4105%>
+            <tr align="center" valign="middle">
+              <td class="table-header" style="heigth:29px"></td>
+              <td class="table-header"><%1474%></td>
+              <td class="table-content-text"><%1475%></td>
+              <td class="table-content-text"><%1476%></td>
+              <td class="table-content-text"><%1477%></td>
+              <td class="table-content-text"><%1478%></td>
+              <td class="table-content-text"><%1479%></td>
+              <td class="table-content-text"><%1480%></td>
+              <td class="table-content-text"><%1481%></td>
+              <td></td>
+            </tr>
+      <%4106%>
+      <%2913%>
+            <tr align="center" valign="middle">
+              <td class="table-header" style="heigth:29px"></td>
+              <td class="table-header"><%1482%></td>
+              <td class="table-content-text"><%1483%></td>
+              <td class="table-content-text"><%1484%></td>
+              <td class="table-content-text"><%1485%></td>
+              <td class="table-content-text"><%1486%></td>
+              <td class="table-content-text"><%1487%></td>
+              <td class="table-content-text"><%1488%></td>
+              <td class="table-content-text"><%1489%></td>
+              <td></td>
+            </tr>
+       <%2921%>
+            <tr align="center" valign="middle" style="height:10px">
+              <td class="table-round-bottom-left" style="heigth:10px;"></td>
+              <td colspan="8" class="table-header"></td>
+              <td class="table-round-bottom-right"></td>
+            </tr>
+       
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+          <td align="center" class="table-seperate-border" style="border-left:1px solid;border-right:1px solid">  
+              <span class="normal-text"><%1490%> :</span>
+              <INPUT TYPE="TEXT" NAME="interval" SIZE="5" MAXLENGTH="5" VALUE=" ">
+              <span class="normal-text" style="padding-left:3px"><%2333%></span>
+              <button type="BUTTON" name="setInterval" class="button-rule" onClick="resetInterval();" style="margin-left:30px"> <span class="roundleft_button"><%1492%></span><span class="roundright_button">&nbsp;&nbsp;</span></button>
+              <button style="margin-left:20px"type="BUTTON" name="stopIntervalBtn" class="button-rule" onClick="return stopInterval();"> <span class="roundleft_button"><%1493%></span><span class="roundright_button">&nbsp;&nbsp;</span></button>
+          </td>
+      </tr>
+
+<!--
+              <button value="submit" name="TRAFFIC_STATUS" class="button-rule" style="padding-left:10px"><span class="roundleft_button"><%2352%></span><span class="roundright_button">&nbsp;&nbsp;&nbsp;&nbsp;</span></button>
+    
+-->          
+  </table>
+  <div class="subhead-bottom"></div>
+ 
+</form>       
+</body>	
+</html>

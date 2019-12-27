@@ -1,0 +1,18 @@
+#
+# For a description of the syntax of this configuration file,
+# see docs/Kconfig-language.txt.
+#
+
+menu "Miscellaneous Utilities"
+
+INSERT
+
+# brcm begin
+config SYSINFO
+	bool "sysinfo"
+	default y
+	help
+	  The system status report utility.
+# brcm end
+
+endmenu

@@ -1,0 +1,44 @@
+1. 	for acos code, we can use below compile flag for common code
+	in file ~/userspace/project/acos/config.in
+		ifeq ($(FXCN_CMS_SUPPORT),1)
+		CFLAGS += -DFXCN_CMS_SUPPORT
+		endif #FXCN_CMS_SUPPORT
+	or you can find below export in ~/Makefile
+		FXCN_CMS_SUPPORT := 1
+2. 	For BRCM code with fxcn patch, please modify 2 things
+	a. 	modify Makefile
+			ifeq ($(FXCN_FW_FEATURES),1)
+			CFLAG += -DACOS_MODULES_ENABLE
+			endif
+		or you can refer the changes in below libnvram.so's Makefile
+			~/userspace/private/apps/wlan/unfnvram/Makefile
+	b. 	Make sure the modification been separate with define ACOS_MODULES_ENABLE
+			#if defined(ACOS_MODULES_ENABLE)
+			.....
+			#endif /*ACOS_MODULES_ENABLE*/
+			
+3. 	Profile MR60/MS60 for easymesh.
+	Profile RAX20 for RAX20.
+
+
+
+
+=================================================================================================================================================
+There are two documents that discuss this issue:
+1.docs/HOWTO/LinuxDeveloperGuide.pdf
+2.Configuration Management System Porting and Development Guide in DocSafe (963XX-PG204-R)
+This is also mirrored in docs/internalDocs/cms-dev-guide.pdf
+
+Issues to consider:
+-Where to put the app, depends on license of the code. See (2) Section 16
+-Use .autodetect mechanism. See (1) Section 6.5 and (2) Section 17
+-Support conditional building, selectable from make menuconfig. See (1) Section 6.1
+-Make other subsystems/libraries/apps aware of this app or feature. See (1) Section 6.2
+-Try to use a standard Makefile template. See (1) Section 6.6 and (2) Section 17.
+-Advantage of using the standard Makefile template is you can type make from the local directory (no need to type make from the top)
+-Does my app need a CMS Entity ID (EID)?
+-Understand the difference between an App and Command. See (2) Section 17.
+-App and Commands need to have an EID if:
+-It will use CMS Logging service
+-It will use CMS Message service
+-It will access the MDM

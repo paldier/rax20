@@ -1,0 +1,1 @@
+../init.d/S26acos_pre_init.sh

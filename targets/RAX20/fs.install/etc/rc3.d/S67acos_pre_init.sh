@@ -1,0 +1,1 @@
+../init.d/S67acos_pre_init.sh
